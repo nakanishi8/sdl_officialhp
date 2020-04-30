@@ -1,0 +1,177 @@
+@import "../../../_main";
+
+@include mq(pc) {
+  .contents {
+    width: 1000px;
+    margin: 46px auto 0;
+    display: flex;
+    justify-content: space-between;
+    .left {
+      margin-bottom: 50px;
+      width: 750px;
+    }
+    .right{
+      width: 210px;
+    }
+    .article {
+      &Mainvisual {
+        position: relative;
+        border-bottom: 2px solid $accentColor;
+        img {
+          width: 100%;
+        }
+        h2 {
+          background: rgba(51,51,51,0.9);
+          width: 100%;
+          padding: 0 45px;
+          box-sizing: border-box;
+          min-height: 100px;
+          margin-bottom: 0;
+          color: #fff;
+          display: flex;
+          align-items: center;
+          font-size: 24px;
+          font-family: $fontFamilyW3;
+          letter-spacing: 0px;
+        }
+      }
+      .people {
+        h2 {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          letter-spacing: 0.7px;
+        }
+      }
+      &__content {
+        margin-top: 78px;
+        h2 {
+          font-size: 20px;
+          margin-bottom: 33px;
+        }
+        p {
+          font-size: 16px;
+          line-height: 2;
+          margin-bottom: 32px;
+        }
+        a {
+          color: $accentColor;
+        }
+      }
+      table {
+        display: flex;
+        border:none;
+        margin-bottom: 115px;
+        thead {
+          display: flex;
+          tr {
+            display: flex;
+            th {
+              width: 50%;
+              border-bottom: 0px;
+              &:first-child {
+                padding:0 33px 0 0;
+              }
+              &:last-child {
+                font-size: 16px;
+                font-weight: normal;
+                padding: 2px 6px;
+                line-height: 2;
+              }
+            }
+          }
+        }
+      }
+    }
+    .message {
+      margin-top: 0;
+      h2 {
+        color: $accentColor;
+        font-size: 25px;
+        letter-spacing: 0.2px;
+        line-height: 2;
+        margin-top: 39px;
+      }
+    } 
+  }
+}
+
+@include mq(sp) {
+  .article {
+    &Mainvisual {
+      position: relative;
+      border-bottom: 2px solid $accentColor;
+      img {
+        width: 100%;
+      }
+      h2 {
+        background: rgba(51,51,51,0.9);
+        width: 100%;
+        padding: 0px 23px;
+        font-weight: bold;
+        box-sizing: border-box;
+        min-height: 57px;
+        margin-bottom: 0;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+      }
+
+      .people {
+        padding: 0px 20px;
+        letter-spacing: 0.5px;
+      }
+    }
+    &__content {
+      padding: 0 20px;
+      margin-top: 36px;
+      h2 {
+        font-size: 18px;
+        line-height: 1.5;
+        margin-bottom: 15px;
+      }
+      p {
+        font-size: 16px;
+        line-height: 1.9;
+        margin-bottom: 20px;
+      }
+      a {
+        color: $accentColor;
+      }
+      table {
+        border:none;
+        margin-bottom: 15px;
+        thead {
+          tr {
+            th {
+              width: 100%;
+              border-bottom: 0px;
+              padding: 0;
+              display: block;
+              font-size: 16px;
+              line-height: 1.9;
+              margin-bottom: 20px;
+              font-weight: normal;
+            }
+          }
+        }
+      }
+    }
+    .message {
+      margin-top: 20px;
+      h2 {
+        margin: 42px 0 45px;
+        padding: 7px 0 3px;
+        color: $accentColor;
+        font-size: 18px;
+        letter-spacing: 0.2px;
+        letter-spacing: 0px;
+        line-height: 1.7;
+        border-top: 2px solid $accentColor;
+        border-bottom: 2px solid $accentColor;
+      }
+    }
+
+  }
+}

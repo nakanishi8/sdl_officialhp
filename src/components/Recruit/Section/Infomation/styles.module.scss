@@ -1,0 +1,131 @@
+@import "../../../../_main";
+
+@include mq(pc) {
+  .section {
+    // margin-top: 752px;
+    margin-top: 100px;
+    .wrap {
+      // padding: 30px 0;
+      padding: 75px 0;
+      width: 1000px;
+      margin: 0 auto;
+    }
+    .informationList {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      li {
+        margin-right: 50px;
+        margin-bottom: 50px;
+        width: 47%;
+        height: 300px;
+        &:nth-child(2) {
+          margin-right: 0;
+        }
+        &:nth-child(n + 3) {
+          width: 31%;
+          margin-right: 30px;
+          margin-bottom: 0;
+        }
+        &:last-child{
+          margin-right: 0;
+        }
+        a {
+          position: relative;
+          display: block;
+          overflow: hidden;
+          height: 300px;
+          &:hover {
+            img {
+              opacity: 0.8;
+            }
+            span {
+              transition: all .3s ease;
+              color: #fff;
+              background-color: $accentColor;
+              opacity: 0.9;
+              &::after {
+                border-right: 1px solid #fff;
+                border-top: 1px solid #fff;
+              }
+            }
+          }
+        }
+        img {
+          width: 100%;
+        }
+        span {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          display: block;
+          width: 100%;
+          background-color: rgba(255,255,255,0.8);
+          color: $accentColor;
+          text-align: center;
+          letter-spacing: 0.2em;
+          padding: 40px 0px;
+          font-size: 16px;
+          &::after {
+            border-right: 1px solid $accentColor;
+            border-top: 1px solid $accentColor;
+            content: "";
+            height: 20px;
+            width: 20px;
+            right: 20px;
+            position: absolute;
+            transform: rotate(45deg);
+            top: 40px;
+          }
+        }
+      }
+    }
+  }
+}
+@include mq(sp) {
+.section {
+  margin-top: 90px;
+  .informationList {
+    margin: 0;
+    padding: 0 20px;
+    li {
+      border-bottom: 1px solid #ddd;
+      padding: 10px 0;
+      position: relative;
+      a {
+        display: flex;
+        align-items: center;
+      }
+      p {
+        width: 140px;
+        height: 102px;
+        text-align: center;
+        overflow: hidden;
+      }
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+      span {
+        padding-left: 15px;
+        font-size: 14px;
+        font-weight: bold;
+        color: $accentColor;
+      }
+      &:after {
+        border-right: 1px solid $accentColor;
+        border-top: 1px solid $accentColor;
+        content: "";
+        height: 12px;
+        width: 12px;
+        right: 3px;
+        position: absolute;
+        transform: rotate(45deg);
+        top: 50%;
+        margin-top: -6px;
+      }
+    }
+  }
+}
+}

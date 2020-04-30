@@ -1,0 +1,36 @@
+@import "../../../_main";
+
+@include mq(pc) {
+.root{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 143px;
+    margin-top: 160.5px;
+    background: #242424;
+  .logo {
+    z-index: 100;
+  }
+  img {
+    width: 174px;
+  }
+}
+}
+
+@include mq(sp) {
+  .root {
+    margin-top: 42px;
+    background: #242424;
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .logo {
+      z-index: 100;
+    }
+    img {
+      width: 119px;
+    }
+  }
+}

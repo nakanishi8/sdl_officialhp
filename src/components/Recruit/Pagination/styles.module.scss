@@ -1,0 +1,122 @@
+@import "../../../_main";
+
+
+.pagination {
+  &Link:hover {
+    color: #fff;
+    background-color: #C10028;
+  }
+  .next:hover,
+  .back:hover {
+    &:after {
+      border-color: #fff;
+    }
+  }
+}
+@include mq(pc) {
+  .pagination{
+    display: flex;
+    justify-content: center;
+    margin-top: 81px;
+    &Link {
+      border: 1px solid $accentColor;
+      color: $accentColor;
+      position: relative;
+      font-size: 14px;
+      align-items: center;
+      display: flex;
+    }
+    .next::after,
+    .back::after {
+        content: "";
+        border-right: 1px solid;
+        border-top: 1px solid;
+        border-color: $accentColor;
+        height: 16px;
+        width: 16px;
+        position: absolute;
+        top: 50%;
+        margin-top: -8px;
+      }
+      .next{
+        padding-left: 15px;
+        width: 80px;
+        height: 50px;
+        justify-content: flex-start;
+        &::after {
+          transform: rotate(45deg);
+          right: 10px;
+        }
+      }
+      .back {
+        padding-right: 15px;
+        width: 80px;
+        height: 50px;
+        justify-content: flex-end;
+        &::after {
+          transform: rotate(225deg);
+          left: 10px;
+        }
+
+      }
+      .list {
+        width: 120px;
+        margin: 0 10px;
+        justify-content: center;
+    }
+  }
+}
+
+@include mq(sp) {
+  .pagination{
+    display: flex;
+    justify-content: center;
+    margin-top: 29px;
+    &Link {
+      border: 1px solid $accentColor;
+      color: $accentColor;
+      position: relative;
+      font-size: 14px;
+      align-items: center;
+      display: flex;
+      height: 40px;
+    }
+    .next::after,
+    .back::after {
+        content: "";
+        border-right: 1px solid;
+        border-top: 1px solid;
+        border-color: $accentColor;
+        height: 8px;
+        width: 8px;
+        position: absolute;
+        top: 50%;
+        margin-top: -4px;
+      }
+      .next{
+        padding-left: 15px;
+        width: 70px;
+        justify-content: flex-start;
+        &::after {
+          transform: rotate(45deg);
+          right: 10px;
+        }
+      }
+      .back {
+        padding-right: 15px;
+        width: 70px;
+        justify-content: flex-end;
+        &::after {
+          transform: rotate(225deg);
+          left: 10px;
+        }
+
+      }
+      .list {
+        width: 100px;
+        margin: 0 10px;
+        justify-content: center;
+    }
+  }
+  
+}

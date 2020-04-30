@@ -1,0 +1,105 @@
+@import "../../../../_main";
+$Hiragino: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Osaka, ＭＳＰゴシック, sans-serif;
+@include mq(pc) {
+div.wrap {
+  width: 825px;
+  margin: 0 auto;
+  padding: 158px 0px;
+}
+p.sectionText {
+  margin: 0 0 1.5em;
+  font-size: 18px;
+  line-height: 1.8;
+  text-align: center;
+}
+.member {
+  padding: 4px 0;
+  overflow: hidden;
+  &__title {
+    font-family: $Hiragino;
+    color: #d84252;
+    font-size: 24px;
+    margin: 0 0 20px;
+    padding: 20px 0 10px;
+    font-weight: bold;
+    font-style: italic;
+    border-bottom: 1px solid #666;
+    letter-spacing: -1.1px;
+    width: 100%;
+    float: right;
+    width: 557px;
+    span {
+      margin-top: 10px;
+      font-size: 18px;
+      color:#000 ;
+      display: block;
+      letter-spacing: 0;
+    }
+  }
+  &__text{
+    width: 100%;
+    float: right;
+    width: 557px;
+    p {
+      font-size: 14px;
+      line-height: 1.6;
+      margin-right: 22px;
+      &:first-child {
+        margin-bottom: 23px;
+      }
+    }
+  }
+  &__img {
+    float: left;
+    margin: 0 0 0;
+  }
+}
+}
+@include mq(sp) {
+div.wrap {
+  padding: 50px 10px;
+}
+p.sectionText {
+  margin: 0 0 1.5em;
+  font-size: 12px;
+  line-height: 1.8;
+  text-align: left;
+}
+.member {
+  &__title {
+    font-family: $Hiragino;
+    color: #d84252;
+    font-size: 14px;
+    margin: 0;
+    padding: 0 0 7px;
+    font-weight: bold;
+    font-style: italic;
+    border-bottom: 1px solid #666;
+    letter-spacing: -1.1px;
+    span {
+      margin-top: 5px;
+      font-size: 11px;
+      color:#000 ;
+      display: block;
+      letter-spacing: 0;
+    }
+  }
+  &__text{
+    width: 100%;
+    p {
+      font-size: 11px;
+      line-height: 1.5;
+      &:first-child {
+        margin-bottom: 18px;
+      }
+    }
+  }
+  &__img {
+    margin: 14px 0;
+    text-align: center;
+    img {
+      width: 123px;
+    }
+  }
+}
+}

@@ -1,0 +1,78 @@
+@import "../../../_main";
+
+@include mq(pc) {
+  .contents {
+    width: 1000px;
+    margin: 34px auto 0;
+    display: flex;
+    justify-content: space-between;
+    .left {
+      width: 750px;
+      border-bottom: 1px solid #33c3;
+      padding-bottom: 64px;
+    }
+    .right{
+      width: 210px;
+    }
+    .contact {
+      &Title {
+        font-family: $fontFamilyW3;
+        font-size: 17px;
+        font-weight: normal;
+        letter-spacing: -0.15px;
+        line-height: 3em;
+        margin-bottom: 45px;
+        span {
+          display: block;
+        }
+      }
+      &List {
+        padding: 0 21px;
+        li {
+          margin-bottom: 14px;
+          text-indent: -1em;
+          margin-left: 1em;
+          a {
+            font-size: 14px;
+            color: $accentColor;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mq(sp) {
+  .contents {
+    margin-top: 17px;
+    .left {
+      padding: 0 20px 44px;
+    }
+  }
+  .contact {
+    &Title {
+      font-family: $fontFamilyW3;
+      font-size: 16px;
+      font-weight: normal;
+      letter-spacing: -0.3px;
+      line-height: 1.5em;
+      margin-bottom: 55px;
+      span {
+        margin-top: 21px;
+        display: block;
+      }
+    }
+    &List {
+      padding: 0 19px;
+      li {
+        margin-bottom: 14px;
+        text-indent: -1em;
+        margin-left: 1em;
+        a {
+          font-size: 13px;
+          color: $accentColor;
+        }
+      }
+    }
+  }
+}

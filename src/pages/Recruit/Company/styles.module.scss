@@ -1,0 +1,84 @@
+@import "../../../_main";
+
+@include mq(pc) {
+  .contents {
+    width: 1000px;
+    margin: 46px auto 0;
+    display: flex;
+    justify-content: space-between;
+    .left {
+      width: 750px;
+      margin-bottom: 80px;
+    }
+    .right{
+      width: 210px;
+    }
+  }
+  .companyList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &__item {
+      min-width: 329px;
+      width: 48%;
+      margin-top: 20px;
+      margin-right: 10px;
+      margin-left: 8px;
+      border: solid 1px $accentColor;
+      border-top: 4px solid $accentColor;
+      overflow: hidden;
+      &:nth-child(odd) {
+        margin-left: 0;
+      }
+      &:nth-child(even) {
+        margin-right: 0;
+      }
+      a {
+        color: $accentColor;
+        font-size: 32px;
+        font-weight: bold;
+        padding: 45px 13px 35px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        img {
+          padding-top: 1px;
+        }
+      }
+    }
+  }
+}
+
+@include mq(sp) {
+  .contents {
+    margin-top: 21px;
+    .left {
+      > img {
+        width: 100%;
+        padding: 0 20px;
+      }
+    }
+  }
+  .companyList {
+    padding: 0 20px;
+    &__item {
+      width: 100%;
+      margin-top: 15px;
+      border: solid 1px $accentColor;
+      border-top: 4px solid $accentColor;
+      overflow: hidden;
+      a {
+        color: $accentColor;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 13px 16px 12px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        img {
+          padding-top: 1px;
+        }
+      }
+    }
+  }
+}

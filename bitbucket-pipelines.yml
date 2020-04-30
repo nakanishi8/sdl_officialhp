@@ -1,0 +1,48 @@
+# This is a sample build configuration for Python.
+# Check our guides at https://confluence.atlassian.com/x/x4UWN for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+image: nikolaik/python-nodejs:latest
+
+pipelines:
+  branches:
+    develop:
+      #- step:
+      #    name: Test（Dev）
+      #    script:
+            # - pip install -U pip
+            # - pip install -r hello_world/requirements.txt
+            # - pip install -r ec2/requirements.txt
+            # - pip install -r dynamo/requirements.txt
+            # - pip install pytest pytest-mock pytest-cov moto
+            # - python -m pytest tests/ -v --cov-report=term 
+      - step:
+          name: Build+Deploy（Dev）
+          deployment: Dev
+          caches:
+            - pip
+          script:
+            - export SAM_CLI_TELEMETRY=0
+            - npm install -g gatsby-cli
+            - npm install
+            - npm run build:dev
+            - pip install awscli
+            - echo $BITBUCKET_TAG
+            - echo $BITBUCKET_COMMIT
+            - aws s3 sync ./public/ s3://sdl-website.stg-sdl/digital2
+    master:
+      - step:
+          name: Build+Deploy（Prod）
+          deployment: Prod
+          caches:
+            - pip
+          script:
+            - export SAM_CLI_TELEMETRY=0
+            - npm install
+            - npm install -g gatsby-cli
+            - npm run build:prod
+            - pip install awscli
+            - echo $BITBUCKET_TAG
+            - echo $BITBUCKET_COMMIT
+            - aws s3 sync ./public/ s3://sdl-website.prod-sdl/digital2

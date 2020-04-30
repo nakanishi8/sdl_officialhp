@@ -1,0 +1,22 @@
+@import "../../../_main";
+
+@include mq(pc) {
+  .contents {
+    width: 1000px;
+    margin: 46px auto 0;
+    display: flex;
+    justify-content: space-between;
+    .left {
+      width: 750px;
+    }
+    .right{
+      width: 210px;
+    }
+  }
+}
+
+@include mq(sp) {
+  .contents {
+    margin-top: 21px;
+  }
+}

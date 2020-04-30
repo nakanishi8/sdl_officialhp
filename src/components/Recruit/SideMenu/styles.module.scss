@@ -1,0 +1,86 @@
+@import "../../../_main";
+
+$red: $accentColor;
+
+@include mq(pc) {
+  .sideMenu {
+    width: 210px;
+    &__item {
+      list-style-type: none;
+      display: flex;
+      align-items: center;
+      vertical-align: middle;
+      position: relative;
+      font-weight: bold;
+      box-sizing: border-box;
+      margin-bottom:0;
+      a {
+        border-bottom: 1px solid #eee;
+        padding: 18px 15px 19px;
+        font-size: 14px;
+        font-weight: normal;
+        color: $red;
+        display: block;
+        width: 100%;
+        position: relative;
+        &:after {
+          border-right: 1px solid $red;
+          border-top: 1px solid $red;
+          content: "";
+          height: 8px;
+          width: 8px;
+          right: 10px;
+          position: absolute;
+          transform: rotate(45deg);
+          top: 45%;
+        }
+        &:hover {
+          background-color: $red;
+          color: #fff;
+          border-bottom: 1px solid $red;
+          &:after {
+            border-color: #fff;
+          }
+        }
+        &[aria-current] {
+          background-color: #eee;
+        }
+      }
+    }
+  }
+}
+
+@include mq(sp) {
+  .sideMenu {
+    width: 100%;
+    border-top: 1px solid $red;
+    border-bottom: 1px solid $red;
+    margin: 29px 0 50px;
+    &__item {
+      display: block;
+      border-bottom: 1px solid #eee;
+      margin: 0;
+      a {
+        color: $red;
+        display: block;
+        padding: 13px 23px 11px;
+        position: relative;
+        font-family: inherit;
+        font-size: 14px;
+        letter-spacing: -0.6px;
+        &::after {
+          border-right: 1px solid $red;
+          border-top: 1px solid $red;
+          content: "";
+          height: 8px;
+          width: 8px;
+          right: 22px;
+          position: absolute;
+          transform: rotate(45deg);
+          top: 50%;
+          margin-top: -4px;
+        }
+      }
+    }
+  }
+}

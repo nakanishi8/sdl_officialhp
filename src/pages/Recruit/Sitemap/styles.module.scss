@@ -1,0 +1,73 @@
+@import "../../../_main";
+
+@include mq(pc) {
+  .contents {
+    width: 1000px;
+    margin: 48px auto 0;
+    display: flex;
+    justify-content: space-between;
+    .left {
+      width: 750px;
+    }
+    .right{
+      width: 210px;
+    }
+  }
+  .sitemap {
+    &Title {
+      margin-bottom: 14px;
+      a {
+        color: $accentColor;
+        font-size: 18px;
+        font-weight: normal;
+      }
+    }
+    &List {
+      padding: 0 20px;
+      display: flex;
+      flex-wrap: wrap;
+      li {
+        margin-bottom: 0px;
+        width: 196px;
+        a {
+          color: $accentColor;
+          font-size: 14px;
+          font-weight: normal;
+        }
+      }
+    }
+  }
+}
+
+@include mq(sp) {
+  .contents {
+    margin-top: 17px;
+    .left {
+      padding: 0 20px 1px;
+    }
+  }
+  .sitemap {
+    &Title {
+      margin-bottom: 14px;
+      a {
+        color: $accentColor;
+        font-size: 18px;
+        font-weight: normal;
+      }
+    }
+    &List {
+      padding: 0 10px;
+      display: flex;
+      flex-wrap: wrap;
+      li {
+        margin-bottom: 0px;
+        width: 50%;
+        a {
+          color: $accentColor;
+          font-size: 13px;
+          font-weight: normal;
+        }
+      }
+    }
+  }
+}

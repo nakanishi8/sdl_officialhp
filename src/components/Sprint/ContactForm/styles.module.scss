@@ -1,0 +1,14 @@
+@import "../../../_main";
+
+@include mq(pc) {
+  .root {
+      width: 100%;
+      margin: 0 auto;
+  }
+}
+
+@include mq(sp) {
+  .root {
+    width: 100%;
+  }
+}

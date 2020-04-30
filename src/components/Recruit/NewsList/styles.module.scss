@@ -1,0 +1,60 @@
+@import "../../../_main";
+
+@include mq(pc) {
+  .newsList {
+    li {
+      margin-bottom: 10px;
+      font-size: 14px;
+      line-height: 1.5;
+      color: #333;
+      display: flex;
+      align-items: center;
+      span {
+        background: #eee;
+        display: inline-block;
+        font-size: 11px;
+        font-weight: bold;
+        text-align: center;
+        padding: 5px 32px;
+        margin: 0 20px 0 0;
+      }
+      a {
+        text-decoration: none;
+        color: $accentColor;
+      }
+    }
+  }
+}
+@include mq(sp) {
+  .newsList {
+    margin-left: 0;
+    padding: 0 20px;
+    li {
+      margin-bottom: 20px;
+      font-size: 13px;
+      line-height: 1.5;
+      color: #333;
+      display: block;
+      span {
+        background: #eee;
+        display: inline-block;
+        font-size: 11px;
+        font-weight: bold;
+        text-align: center;
+        padding: 5px 33px;
+        margin: 0 auto 0 0;
+      }
+      p {
+          text-align: left;
+          margin-top: 7px;
+        }  
+      a {
+        text-decoration: none;
+        color: $accentColor;
+      }
+      &:last-child {
+        margin-bottom:0;
+      }
+    }
+  }
+}

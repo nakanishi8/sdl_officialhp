@@ -1,0 +1,118 @@
+@import "../../../_main";
+.footer {
+  background: #333;
+}
+@include mq(pc) {
+  .footer {
+    padding: 28px 68px;
+    .logo {
+      img {
+        width: 174px;
+      }
+    }
+    ul {
+      padding: 0 0 0 40px;
+      li {
+        margin-bottom: 0px;
+        line-height: 1;
+        a {
+          color: #fff;
+          text-decoration: underline;
+          line-height: 1;
+          font-size: 12px;
+          font-weight: bold;
+          &::after {
+            content: "\a0\226B";
+          }
+        }
+      }
+    }
+    .holdings {
+      margin-top: 34px;
+      display: inline-block;
+      img {
+        width: 182px;
+      }
+    }
+    .sns {
+      display: flex;
+      align-items: center;
+      padding-top: 40px;
+      padding-left: 0px;
+      justify-content: center;
+
+
+      li {
+        p {
+          width: 35px;
+        }
+        &:first-child {
+          margin-right: 24px;
+        }
+      }
+    }
+    .copy {
+      margin-top: 10px;
+      font-size: 11px;
+      color: #9d9d9d;
+      text-align: center;
+    }
+  }
+}
+@include mq(sp) {
+  .footer {
+    padding: 10px 9px;
+    .logo {
+      img {
+        width: 131px;
+      }
+    }
+    ul {
+      padding: 0 0 0 30px;
+      li {
+        margin: 0 0 2px 0;
+        line-height: 1;
+        a {
+          color: #fff;
+          text-decoration: underline;
+          line-height: 1;
+          font-size: 10px;
+          font-weight: bold;
+          &::after {
+            content: "\a0\226B";
+          }
+        }
+      }
+    }
+    .holdings {
+      margin-top: 11px;
+      display: inline-block;
+      img {
+        width: 135px;
+      }
+    }
+    .sns {
+      display: flex;
+      align-items: center;
+      padding-top: 28px;
+      padding-left: 0px;
+      justify-content: center;
+
+
+      li {
+        p {
+          width: 35px;
+        }
+        &:first-child {
+          margin-right: 24px;
+        }
+      }
+    }
+    .copy {
+      margin-top: 5px;
+      font-size: 10px;
+      color: #9d9d9d;
+      text-align: center;
+    }
+  }
+}

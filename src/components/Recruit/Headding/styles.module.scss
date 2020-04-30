@@ -1,0 +1,54 @@
+@import "../../../_main";
+
+@include mq(pc) {
+  .sectionTitle {
+    font-size: 32px;
+    letter-spacing: 0.2em;
+    color: $accentColor;
+    font-weight: normal;
+    border-bottom: 1px solid $accentColor;
+    padding-bottom: 10px;
+    // display: inline-block;
+    // padding-right: 80px;
+    // padding-left: 210px;
+    display: block;
+    width: 300px;
+    text-align: center;
+    margin: 0 auto;
+
+  }
+  .title {
+    margin: 47px 0  0;
+    letter-spacing: 0.3em;
+    line-height: 1;
+    font-size: 26px;
+    font-weight: normal;
+    background-color: #efefef;
+    text-align: center;
+    padding: 36px 0;
+  }
+}
+@include mq(sp) {
+  .sectionTitle {
+    color: $accentColor;
+    font-size: 1.7rem;
+    border-bottom: 1px solid $accentColor;
+    font-weight: normal;
+    letter-spacing: 0.2em;
+    // margin: 0 20px 14px 0;
+    // padding: 0 20px 14px;
+    text-align: center;
+    padding: 0 0 14px;
+    margin: 0 0 14px 0;
+  } 
+  .title {
+    margin: 42px 0 0;
+    letter-spacing: 0.3em;
+    line-height: 1;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: #efefef;
+    text-align: center;
+    padding: 21px 0;
+  }
+}

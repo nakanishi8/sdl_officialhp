@@ -1,0 +1,42 @@
+@import "./_breakpoints";
+
+// font-family
+$fontFamilyW3 : ヒラギノ角ゴ Pro W3, Hiragino Kaku Gothic Pro, メイリオ, Meiryo, Osaka, ＭＳ Ｐゴシック, MS PGothic, sans-serif;
+$fontAvenir: "Avenir Next", Verdana, sans-serif;
+// color
+$accentColor: #C10028;
+
+@include mq(sp) {
+  br.pc {
+    display: none;
+  }
+}
+
+@include mq(pc) {
+  br.sp {
+    display: none;
+  }
+}
+
+
+.p-index {
+  .slick-active img {
+    animation: Zoom 5s ease-in-out;
+  }
+  
+  @keyframes Zoom {
+    0% {
+      transform: scale(1.1);
+    }
+    100%{
+        transform:scale(1.0);
+      }
+  }
+}
+
+a:hover {
+  cursor:pointer
+}
+body {
+  font-family: $fontFamilyW3;
+}

@@ -1,0 +1,51 @@
+@import "../../../_main";
+
+@include mq(pc) {
+  .breadcrumbsList {
+    display: flex;
+    margin: 11px auto 0;
+    width: 1000px;
+    &__item {
+      font-size: 12px;
+      margin-right: 20px;
+      margin-bottom: 0;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        right: -11px;
+        top: 11px;
+        width: 1px;
+        height: 9px;
+        background-color: #000;
+        transform: rotate(61deg);
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        right: -11px;
+        top: 7px;
+        width: 1px;
+        height: 9px;
+        background-color: #000;
+        transform: rotate(-61deg);
+      }
+      &:last-child {
+        &::after {
+          content: none;
+        }
+        &::before {
+          content: none;
+        }
+      }
+      a {
+        color: $accentColor;
+      }
+    }
+  }
+}
+@include mq(sp) {
+  .breadcrumbsList{
+    display: none;
+  }
+}

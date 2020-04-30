@@ -1,0 +1,128 @@
+@import "../../../_main";
+
+@include mq(pc) {
+  .accordion {
+    &__title {
+      border-top: solid 4px $accentColor;
+      border-left: solid 1px #ccc;
+      border-right: solid 1px #ccc;
+      border-bottom: solid 1px #ccc;
+      position: relative;
+      padding: 8px 40px 8px 10px;
+      margin-top: 18px;
+      font-weight: bold;
+      font-size: 14px;
+      cursor: pointer;
+      &:first-child {
+        margin-top: 28px;
+      }
+      span {
+        position: absolute;
+        right: 11px;
+        top: 52%;
+        transform: translateY(-50%);
+        transition: 0.5s all;
+        width: 10px;
+        height: 10px;
+        &::before {
+          content: "";
+          display: block;
+          width: 2px;
+          height: 100%;
+          background-color: #000;
+          position: absolute;
+          top: 0px;
+          right: 45%;
+        }
+        &::after {
+          content: "";
+          display: block;
+          width: 2px;
+          height: 100%;
+          background-color: #000;
+          position: absolute;
+          top: 0;
+          right: 44%;
+          transform: rotate(-90deg);
+        }
+      }
+      .active {
+        transform: translateY(-50%) rotate(45deg);
+        transition: 0.5s all;
+      }
+    }
+    &__detail {
+      max-height: 0;
+      transition: 0.5s all;
+      overflow: hidden;
+    }
+    &__active {
+      max-height: 2500px;
+      transition: 0.5s all;
+    }
+  }
+}
+
+@include mq(sp) {
+  .accordion {
+    &__title {
+      border-top: solid 4px $accentColor;
+      border-left: solid 1px #ccc;
+      border-right: solid 1px #ccc;
+      border-bottom: solid 1px #ccc;
+      position: relative;
+      padding: 8px 40px 8px 10px;
+      margin-top: 16px;
+      font-weight: bold;
+      font-size: 13px;
+      cursor: pointer;
+      &:first-child {
+        margin-top: 28px;
+      }
+      span {
+        position: absolute;
+        right: 11px;
+        top: 52%;
+        transform: translateY(-50%);
+        transition: 0.5s all;
+        width: 10px;
+        height: 10px;
+        &::before {
+          content: "";
+          display: block;
+          width: 2px;
+          height: 100%;
+          background-color: #000;
+          position: absolute;
+          top: 0px;
+          right: 45%;
+          // transform: rotate(45deg);
+        }
+        &::after {
+          content: "";
+          display: block;
+          width: 2px;
+          height: 100%;
+          background-color: #000;
+          position: absolute;
+          top: 0;
+          right: 44%;
+          transform: rotate(-90deg);
+        }
+      }
+      .active {
+        transform: translateY(-50%) rotate(45deg);
+        transition: 0.5s all;
+      }
+    }
+    &__detail {
+      max-height: 0;
+      transition: 0.5s all;
+      overflow: hidden;
+    }
+    &__active {
+      max-height: 3000px;
+      transition: 0.5s all;
+    }
+  }
+}

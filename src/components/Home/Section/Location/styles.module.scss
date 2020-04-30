@@ -1,0 +1,98 @@
+@import "../../../../_main";
+$Hiragino: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Osaka, ＭＳＰゴシック, sans-serif;
+section.section {
+  background: url(images/locatopn_bg.jpg) no-repeat;
+}
+
+@include mq(pc) {
+section.section  {
+  background-size: cover;
+  background-position: 0 0;
+}
+div.wrap {
+  width: 825px;
+  margin: 0 auto;
+  padding: 158px 0px;
+}
+p.sectionText {
+  margin: 0 0 1.5em;
+  font-size: 18px;
+  line-height: 1.8;
+  text-align: center;
+}
+.lab {
+  display: flex;
+  margin: 0 0 24px;
+  overflow: hidden;
+  p {
+    width: 30%;
+    margin: 0;
+    img {
+      width: 244px;
+    }
+  }
+  dl {
+    width: 70%;
+    padding: 6px 0 0 20px;
+  }
+  dt {
+    font-family: $Hiragino;
+    margin-bottom: 23px;
+    font-size: 24px;
+    letter-spacing: -1px;
+    text-shadow: none;
+    font-weight: bold;
+    color: #ea2e4d;
+  }
+  dd {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+}
+}
+@include mq(sp) {
+section.section  {
+  background-position: 50% 0;
+  // background-size: 240% auto;
+  background-size: cover;
+}
+div.wrap {
+  padding: 50px 10px;
+}
+p.sectionText {
+  margin: 0 0 1.5em;
+  font-size: 12px;
+  line-height: 1.8;
+  text-align: left;
+}
+
+.lab {
+  margin: 0 0 21px;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  p {
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    img {
+      width: 122px;
+    }
+  }
+  dl {
+    margin: 0 0 10px;
+  }
+  dt {
+    font-family: $Hiragino;
+    margin: 0 0 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ea2e4d;
+    text-shadow: 0px 1px 0px rgba(0,0,0,0.4);
+  }
+  dd {
+    font-size: 11px;
+    margin: 0;
+    line-height: 1.5;
+  }
+}
+}

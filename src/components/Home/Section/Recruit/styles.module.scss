@@ -1,0 +1,96 @@
+@import "../../../../_main";
+
+
+.recruitButton {
+  display: block;
+  width: 230px;
+  margin: 0 auto;
+  padding: 15px 0;
+  background: #d84252;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.movie {
+  width: 100%;
+}
+
+@include mq(pc) {
+div.wrap {
+  width: 825px;
+  margin: 0 auto;
+  padding: 158px 0px;
+}
+p.sectionText {
+  margin: 0 0 1.5em;
+  font-size: 14px;
+  line-height: 1.8;
+}
+.recruitButton {
+  border-radius: 8px;
+}
+.movie {
+  width: 640px;
+  margin: 0 auto 39px;
+}
+.recruitPosition {
+  h3 { 
+    margin: 0 0 18px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  ul {
+    width: 360px;
+    margin: 0 auto 30px;
+    li {
+      font-size: 14px;
+      margin-bottom: 0;
+      line-height: 1.5;
+      list-style-type: disc;
+    }
+  }
+}
+}
+@include mq(sp) {
+div.wrap {
+  padding: 50px 10px;
+}
+p.sectionText {
+  margin: 0 0 1.5em;
+  font-size: 12px;
+  line-height: 1.8;
+}
+.recruitButton {
+  border-radius: 4px;
+}
+.recruitPosition {
+  margin-top: 20px;
+  h3 { 
+    margin: 0 0 16px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  ul {
+    margin: 0 0 30px 1em;
+    li {
+      font-size: 11px;
+      margin-bottom: 0;
+      line-height: 1.5;
+      list-style-type: disc;
+    }
+  }
+}
+.movie {
+  width: 100%;
+  margin:0 auto 18px;
+}
+}

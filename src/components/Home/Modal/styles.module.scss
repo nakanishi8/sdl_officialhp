@@ -1,0 +1,87 @@
+@import "../../../_main";
+$fadeIn: opacity .5s, visibility .5s ease-in-out;
+
+.root {
+  visibility: hidden;
+  opacity: 0;
+  transition: $fadeIn;
+  position: relative;
+  z-index: 200;
+  .modal {
+    position: fixed;
+    box-sizing: border-box;
+    z-index: 300;
+  }
+  .overlay {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: rgba(0,0,0,0.75);
+    z-index: 200;
+  }
+}
+
+.isActive {
+  visibility: visible;
+  transition: $fadeIn;
+  opacity: 1;
+}
+
+.cloase {
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    &::after {
+      content:"";
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(90deg);
+      background-color: #fff;
+    }
+}
+
+
+
+@include mq(pc) {
+  .modal {
+    width: 940px;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .cloase {
+      border: 2px solid #fff;
+      width: 30px;
+      height: 30px;
+      right: 56px;
+      top: 20px;
+      &::after {
+        width: 3px;
+        height: 65%;
+      }
+  }
+
+}
+@include mq(sp) {
+  .modal {
+    width: 100%;
+    top: 42px;
+    left: 0;
+  }
+  .cloase {
+      border: 1px solid #fff;
+      width: 18px;
+      height: 18px;
+      right: 14px;
+      top: -25px;
+      &::after {
+        width: 2px;
+        height: 65%;
+      }
+  }
+
+}
