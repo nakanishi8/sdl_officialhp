@@ -56,7 +56,10 @@ const RecruitTemplate = ({ frontmatter, html, queryData }: Props) => {
                 ])}
               >
                 {frontmatter.categoryslug === 'PEOPLE' && (
-                  <img src={frontmatter.image.childImageSharp.fluid.src} alt={frontmatter.title} />
+                  <img
+                    src={frontmatter.image.childImageSharp.original.src}
+                    alt={frontmatter.title}
+                  />
                 )}
 
                 <h2>{frontmatter.title}</h2>

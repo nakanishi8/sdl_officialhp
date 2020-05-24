@@ -1,8 +1,8 @@
 @import "../../../_main";
 .root {
   .title {
-    font-family: HiraginoSans-W5;
-    font-weight: normal;
+    font-family: "Hiragino Sans";
+    font-weight: 600;
     color: #242424;
   }
   .date {
@@ -10,8 +10,8 @@
     color: #242424;
   }
   h2 {
-    font-family: HiraginoSans-W5;
-    font-weight: normal;
+    font-family: "Hiragino Sans";
+    font-weight: 600;
     color: #242424;
   }
   .tagList {
@@ -22,22 +22,11 @@
   }
   .contents {
     h2 {
-      font-family: HiraginoSans-W5;
-      font-weight: normal;
+      font-family: "Hiragino Sans";
+      font-weight: 600;
       color: #242424;
       text-align: center;
       position: relative;
-      padding-bottom: 16px;
-      &::after {
-        content:"";
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 84px;
-        height: 1px;
-        background-color: #9F9F9F;
-      }
     }
     h3 {
       font-family: HiraginoSans-W6;
@@ -50,7 +39,6 @@
       font-family: HiraginoSans-W3;
       h2 {
         font-family: HiraginoSans-W6;
-        font-weight: normal;
         color: #242424;
         &::after {
           content: none;
@@ -62,21 +50,8 @@
     li {
       > .text {
         p {
-          font-family: HiraginoSans-W4;
-          &:last-child {
-            font-family: HiraginoSans-W3;
-            span {
-              &::after {
-                content: "/";
-                margin: 0 5px;
-              }
-              &:last-child {
-                &::after {
-                  content:"";
-                }
-              }
-            }
-          }
+          font-family: "Hiragino Sans";
+          font-weight: 400;
         }
       }
     }
@@ -90,10 +65,20 @@
 .root {
   .image {
     width: 1100px;
-    margin: 0 auto 71px;
+    margin: 0 auto;
+    padding: 53px;
+    text-align: center;
+    background-color: #F6F6F6;
     img {
-      width: 100%;
+      max-width: 514px;
+      max-height: 514px;
     }
+  }
+  .subtitle {
+    text-align: center;
+    margin: 60px 0 16px;
+    font-size: 22.5px;
+    line-height: 16px;
   }
   .title {
     font-size: 32px;
@@ -110,25 +95,15 @@
     line-height: 32px;
     margin-bottom: 20px;
   }
-  
+
   h2 {
-    font-family: HiraginoSans-W5;
+    font-family: "Hiragino Sans";
+    font-weight: 500;
     font-size: 28.4px;
     letter-spacing: 0;
     line-height: 36.92px;
     text-align: center;
     position: relative;
-    padding-bottom: 16px;
-    &::after {
-      content:"";
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 84px;
-      height: 1px;
-      background-color: #9F9F9F;
-    }
   }
   .tagList {
     width: 640px;
@@ -153,26 +128,17 @@
   }
   .contents {
     width: 640px;
-    margin: 0 auto 153px;
+    margin: 60px auto;
     h2 {
-      font-family: HiraginoSans-W5;
-      font-size: 28.4px;
+      font-family: "Hiragino Sans";
+      font-weight: 500;
+      font-size: 20px;
       color: #242424;
       letter-spacing: 0;
       line-height: 36.92px;
-      text-align: center;
+      text-align: left;
       position: relative;
-      padding-bottom: 16px;
-      &::after {
-        content:"";
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 84px;
-        height: 1px;
-        background-color: #9F9F9F;
-      }
+      margin-bottom: 20px;
     }
     h3 {
       font-family: HiraginoSans-W6;
@@ -183,15 +149,20 @@
       margin: 65px 0 26px;
     }
     p {
+      width: 640px;
       font-family: HiraginoSans-W3;
-      font-size: 17.8px;
+      font-size: 14px;
       color: #242424;
       letter-spacing: 0;
       line-height: 1.8;
       > span {
-        margin: 83px 0 170px;
+        margin: 30px 0 50px;
       }
     }
+    li {
+      margin-bottom: 40px;
+    }
+
     table {
       margin: 100px 0 142px;
       thead {
@@ -252,7 +223,19 @@
     }
   }
   .productTitle {
+    margin-top: 120px;
     margin-bottom: 56px;
+    padding-bottom: 16px;
+    &::after {
+      content:"";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 84px;
+      height: 1px;
+      background-color: #9F9F9F;
+    }
   }
   .list {
     display: flex;
@@ -260,17 +243,33 @@
     align-items: center;
     margin: 0 auto;
     width: 1100px;
+    li:nth-child(odd){
+      margin-right: 4px;
+    }
+    li:nth-child(even){
+      margin-left: 4px;
+    }
     li {
-      width: 550px;
-      height: 550px;
-      position: relative;
-      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 4px 0;
+      padding: 48px;
+      background-color: #F6F6F6;
+      max-height: 546px;
+      max-width: 546px;
+      width: 50%;
+      > div {
+        position: relative;
+      }
       a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         position: relative;
         overflow: hidden;
-        display: block;
-        width: 550px;
-        height: 550px;
+        height: 546px;
+        width: 546px;
         transition: width 0.3s, height 0.3s, position 0.3s;
         &:hover {
           position: absolute;
@@ -295,6 +294,10 @@
           > .text {
             z-index: 300;
           }
+          .image > img {
+            transition-duration: 0.5s;
+            transform: scale(1.1, 1.1);
+          }
         }
         > .text {
           position: absolute;
@@ -302,39 +305,22 @@
           top:50%;
           left: 50%;
           transform: translate(-50%, -50%);
+          white-space: nowrap;
           p {
-            font-family: HiraginoSans-W4;
+            font-family: "Hiragino Sans";
+            font-weight: 400;
             font-size: 25.32px;
             color: #FFFFFF;
             letter-spacing: 0;
             text-align: center;
             line-height: 37.95px;
-            &:last-child {
-              font-family: HiraginoSans-W3;
-              font-size: 17.8px;
-              margin-top: 13px;
-              span {
-                &::after {
-                  content: "/";
-                  margin: 0 5px;
-                }
-                &:last-child {
-                  &::after {
-                    content:"";
-                  }
-                }
-              }
-            }
           }
         }
       }
       img {
-        min-height: 100%;
-        min-width: 100%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        object-fit: cover;
+        max-height: 450px;
+        max-width: 450px;
       }
     }
   }
@@ -345,17 +331,35 @@
     display: none;
   }
 .root {
-  margin-top: 64px;
+  margin-top: 48px;
+  .image {
+    display: flex;
+    padding: 24px;
+    background-color: #E3E3E3;
+    img {
+      margin: auto;
+      max-width: 296px;
+      max-height: 296px;
+    }
+  }
+  h2 {
+    text-align: center;
+    margin: 60px 0 0;
+    font-size: 16px;
+    line-height: 16px;
+  }
   h1 {
     text-align: center;
-    margin-top: 52px;
-    font-size: 23px;
+    margin-top: 8px;
+    margin-bottom: 24px;
+    font-size: 24px;
+    line-height: 24px;
     letter-spacing: 0.6px;
   }
   .date {
     text-align: center;
     margin-top: 5px;
-    font-size: 14px;
+    font-size: 12px;
   }
   .tagList {
     display: flex;
@@ -377,23 +381,40 @@
   }
   .contents {
     margin-top: 31px;
-    padding: 0 24px;
-    p {
-      line-height: 1.38;
-      margin-bottom: 50px;
-    }
+    margin-bottom: 60px;
     h2 {
-      font-size: 25px;
-      margin: 118px 0 54px;
-      padding-bottom: 19px;
+      font-size: 18px;
+      margin: 40px 0 20.2px;
+      padding: 0 24px;
       letter-spacing: -1px;
-      font-weight: normal;
+      line-height: 1.6;
+      text-align: left;
+    }
+    p {
+      padding: 0 24px;
+      min-width: 180px;
+      font-size: 14px;
+      line-height: 1.38;
+    }
+    div {
+      max-width: 414px;
+      max-height: 414px;
+      margin-top: 24px;
+      padding: 24px;
+      background-color: #F6F6F6;
+      text-align: center;
+    }
+    img {
+      max-width: 296px;
+      max-height: 296px;
+    }
+    .image {
+      padding: 24px 0;
     }
     h3 {
       font-size: 21px;
       letter-spacing: -0.9px;
       margin-bottom: 24px;
-      font-weight: normal;
     }
     table {
       margin: 80px 0 0;
@@ -454,13 +475,13 @@
     }
   }
   .productTitle {
-    font-size: 25px;
+    font-size: 21px;
     padding-bottom: 19px;
-    margin-bottom: 40px;
+    margin-top: 80px;
+    margin-bottom: 65px;
     letter-spacing: -1px;
     text-align: center;
     position: relative;
-    font-weight: normal;
     &::after {
       content:"";
       position: absolute;
@@ -473,20 +494,22 @@
     }
   }
   .list {
+    li:nth-child(n + 3) {
+      display: none;
+    }
     li {
-      width: 100%;
-      margin-bottom: 47px;
+      margin-bottom: 8px;
+      padding: 8px;
+      background-color: #E3E3E3;
       .image {
-        display: block;
-        height: 276px;
-        overflow: hidden;
-        position: relative;
+        display: flex;
+        padding: 24px;
+        width: 100%;
+        background-color: #E3E3E3;
         img {
-          width: 100%;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
+          margin: auto;
+          max-height: 296px;
+          max-width: 296px;
         }
       }
       .text {
@@ -497,10 +520,6 @@
           &:first-child {
             margin: 0 0 5px;
             font-size: 17px;
-            letter-spacing: -0.5px;
-          }
-          &:last-child {
-            font-size: 12px;
             letter-spacing: -0.5px;
           }
         }

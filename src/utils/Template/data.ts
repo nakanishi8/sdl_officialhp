@@ -10,6 +10,7 @@ export const settingQuery = () => {
             frontmatter {
               date
               path
+              subtitle
               title
               pagetype
               categoryslug
@@ -18,7 +19,7 @@ export const settingQuery = () => {
               draft
               image {
                 childImageSharp {
-                  fluid {
+                  original {
                     src
                   }
                 }
@@ -27,6 +28,17 @@ export const settingQuery = () => {
                 childImageSharp {
                   original {
                     src
+                  }
+                }
+              }
+              contents {
+                title
+                text
+                image {
+                  childImageSharp {
+                    original {
+                      src
+                    }
                   }
                 }
               }

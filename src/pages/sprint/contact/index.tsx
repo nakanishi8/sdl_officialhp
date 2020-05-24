@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import SprintLayout from 'components/Sprint/SprintLayout'
 import ContactForm from 'components/Sprint/ContactForm'
 // import styles from './styles.module.scss'

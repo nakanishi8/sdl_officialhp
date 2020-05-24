@@ -41,8 +41,9 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
-        date(formatString: "MM/DD/YYYY")
+        date(formatString: "YYYY/MM/DD")
         path
+        subtitle
         title
         tags
         pagetype
@@ -50,8 +51,19 @@ export const pageQuery = graphql`
         categoryslug
         image {
           childImageSharp {
-            fluid {
+            original {
               src
+            }
+          }
+        }
+        contents {
+          title
+          text
+          image {
+            childImageSharp {
+              original {
+                src
+              }
             }
           }
         }

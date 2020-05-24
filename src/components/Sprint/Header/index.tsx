@@ -1,25 +1,21 @@
 import React from 'react'
-import clsx from 'clsx'
-import scrollTo from 'gatsby-plugin-smoothscroll'
+import { Link } from 'gatsby'
 import styles from './styles.module.scss'
 import logo from 'images/logo_h.png'
-import { Link } from 'gatsby'
 
 interface Props {
   siteTitle?: string
-  onClick: () => void
-  menu: boolean
 }
 
-const Header = ({ siteTitle, onClick, menu }: Props) => {
+const Header = ({ siteTitle }: Props) => {
   return (
     <header className={styles.root}>
       <div className={styles.logo}>
-        <a onClick={() => scrollTo('#top')}>
+        <Link to="/sprint/">
           <img src={logo} alt={siteTitle} />
-        </a>
+        </Link>
       </div>
-      <nav className={styles.navi}>
+      {/* <nav className={styles.navi}>
         <ul className={clsx(styles.menu, menu && styles.select)}>
           <li className={styles.item}>
             <Link to="/">Products</Link>
@@ -34,7 +30,7 @@ const Header = ({ siteTitle, onClick, menu }: Props) => {
         <div className={clsx(styles.menuBtn, menu && styles.select)} onClick={onClick}>
           <span></span>
         </div>
-      </nav>
+      </nav> */}
     </header>
   )
 }

@@ -1,36 +1,120 @@
 @import "../../../_main";
-
+.footer {
+  background: #333;
+}
 @include mq(pc) {
-.root{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 143px;
-    margin-top: 160.5px;
-    background: #242424;
-  .logo {
-    z-index: 100;
-  }
-  img {
-    width: 174px;
-  }
-}
-}
-
-@include mq(sp) {
-  .root {
-    margin-top: 42px;
-    background: #242424;
-    height: 150px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .footer {
+    padding: 28px 68px;
+    margin-top: 8px;
     .logo {
-      z-index: 100;
+      img {
+        width: 174px;
+      }
     }
-    img {
-      width: 119px;
+    ul {
+      padding: 0 0 0 40px;
+      li {
+        margin-bottom: 0px;
+        line-height: 1;
+        a {
+          color: #fff;
+          text-decoration: underline;
+          line-height: 1;
+          font-size: 12px;
+          font-weight: bold;
+          &::after {
+            content: "\a0\226B";
+          }
+        }
+      }
+    }
+    .holdings {
+      margin-top: 34px;
+      display: inline-block;
+      img {
+        width: 182px;
+      }
+    }
+    .sns {
+      display: flex;
+      align-items: center;
+      padding-top: 40px;
+      padding-left: 0px;
+      justify-content: center;
+
+
+      li {
+        p {
+          width: 35px;
+        }
+        &:first-child {
+          margin-right: 24px;
+        }
+      }
+    }
+    .copy {
+      margin-top: 10px;
+      font-size: 11px;
+      color: #9d9d9d;
+      text-align: center;
+    }
+  }
+}
+@include mq(sp) {
+  .footer {
+    padding: 10px 9px;
+    margin-top: 8px;
+    .logo {
+      img {
+        width: 131px;
+      }
+    }
+    ul {
+      padding: 0 0 0 30px;
+      li {
+        margin: 0 0 2px 0;
+        line-height: 1;
+        a {
+          color: #fff;
+          text-decoration: underline;
+          line-height: 1;
+          font-size: 10px;
+          font-weight: bold;
+          &::after {
+            content: "\a0\226B";
+          }
+        }
+      }
+    }
+    .holdings {
+      margin-top: 11px;
+      display: inline-block;
+      img {
+        width: 135px;
+      }
+    }
+    .sns {
+      display: flex;
+      align-items: center;
+      padding-top: 28px;
+      padding-left: 0px;
+      justify-content: center;
+
+
+      li {
+        p {
+          width: 35px;
+        }
+        &:first-child {
+          margin-right: 24px;
+        }
+      }
+    }
+    .copy {
+      margin-top: 5px;
+      font-size: 10px;
+      color: #9d9d9d;
+      text-align: center;
     }
   }
 }

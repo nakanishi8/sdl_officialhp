@@ -2,6 +2,7 @@ export interface Frontmatter {
   date: string
   path: string
   title: string
+  subtitle: string
   pagetype: string
   categoryslug: string
   tags?: string[] | null | undefined
@@ -15,7 +16,20 @@ export interface Frontmatter {
   }
   image: {
     childImageSharp: {
-      fluid: {
+      original: {
+        src: string
+      }
+    }
+  }
+  contents: Content[]
+}
+
+export interface Content {
+  title: string
+  text: string
+  image: {
+    childImageSharp: {
+      original: {
         src: string
       }
     }

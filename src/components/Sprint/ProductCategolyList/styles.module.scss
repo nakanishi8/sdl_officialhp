@@ -1,0 +1,189 @@
+@import "../../../_main";
+.text {
+  p {
+    font-family: "Hiragino Sans";
+    font-weight: 400;
+    &:last-child {
+      font-family: HiraginoSans-W3;
+    }
+  }
+}
+@include mq(pc) {
+  .sp {
+    display: none;
+  }
+  li.galleryItem:nth-child(odd){
+    margin-right: 4px;
+  }
+  li.galleryItem:nth-child(even){
+    margin-left: 4px;
+  }
+  li.galleryItem {
+    margin: 4px 0px;
+    padding: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F6F6F6;
+    max-height: 546px;
+    max-width: 546px;
+    width: 50%;
+    > div {
+      position: relative;
+    }
+    a {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 546px;
+      width: 546px;
+      transition: width 0.3s, height 0.3s, position 0.3s;
+      &:hover {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 605px;
+        height: 605px;
+        z-index: 100;
+        transition: width 0.3s, height 0.3s, position 0.3s;
+        box-shadow: -4px 3px 5px 0px rgba(0, 0, 0, 0.4);
+        &:after {
+          content: "";
+          background: rgba(0,0,0,0.60);
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          z-index: 200;
+          top: 0;
+          left: 0;
+        }
+        > .text {
+          z-index: 300;
+        }
+        .image > img {
+          transition-duration: 0.5s;
+          transform: scale(1.1, 1.1);
+        }
+      }
+      > .text {
+        position: absolute;
+        z-index: -100;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        p {
+          font-family: "Hiragino Sans";
+          font-weight: 400;
+          font-size: 25.32px;
+          color: #FFFFFF;
+          letter-spacing: 0;
+          text-align: center;
+          line-height: 37.95px;
+          white-space: nowrap;
+        }
+      }
+    }
+    img {
+      object-fit: cover;
+      max-height: 450px;
+      max-width: 450px;
+    }
+    &:nth-child(3n) {
+      max-height: 546px;
+      min-width: 100%;
+      a {
+        position: relative;
+        height: 546px;
+        width: 1100px;
+        &:hover {
+          transform: translate(-50%, 0%);
+        }
+      }
+      img {
+        max-height: 450px;
+        max-width: 450px;
+      }
+    }
+    &:nth-child(4) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 0;
+      > div {
+        position: relative;
+        width: 50%;
+        height: ceil(546px / 2);
+        border-right: solid 8px #FFFFFF;
+      }
+      > div:nth-child(1), > div:nth-child(2) {
+        border-bottom: solid 8px #FFFFFF;
+      }
+      a {
+        height: ceil(546px / 2);
+        width: ceil(546px / 2);
+        &:hover {
+          height: ceil(546px / 2 + 50px);
+          width: ceil(546px / 2 + 50px);
+          transition: width 0.3s, height 0.3s, position 0.3s;
+        }
+        > .text {
+          p {
+            font-size: 19px;
+          }
+        }
+      }
+      img {
+        max-height: 220px;
+        max-width: 220px;
+      }
+    }
+  }
+}
+@include mq(sp) {
+  .pc {
+    display: none;
+  }
+  li.galleryItem {
+    margin-bottom: 8px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    a {
+      display: block;
+      .image {
+        height: 414px;
+        overflow: hidden;
+        background-color: #F6F6F6;
+        position: relative;
+      }
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 24px 24px;
+      }
+    }
+    .text {
+      text-align: center;
+      color: #242424;
+      padding-top: 20px;
+      p {
+        &:first-child {
+          font-size: 17px;
+          letter-spacing: -0.5px;
+        }
+      }
+    }
+  }
+  .splitItem {
+    > div {
+      margin-bottom: 8px;
+    }
+  }
+}
