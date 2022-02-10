@@ -39,7 +39,7 @@
     "graphql": "14.5.8",
     "husky": "^4.2.3",
     "lint-staged": "^10.0.8",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "prop-types": "15.7.2",
     "react": "16.10.2",
     "react-dom": "16.10.2",
